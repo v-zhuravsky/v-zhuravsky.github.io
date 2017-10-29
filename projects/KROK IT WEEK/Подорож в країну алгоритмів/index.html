@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Путишествие в страну алгоритмов</title>
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="css/bs-grid.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header class="header shadow">
+		<ul>
+			<li class="active"><a href="index.html">Главная</a></li>
+			<li><a href="algorithms.html">Алгоритмы</a></li>
+		</ul>
+	</header>
+
+	<div class="container main">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="sidebar block shadow">
+					
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="block shadow content">
+					<h1>Веб-квест "Путишествие в страну алгоритмов"</h1>
+					<p>Каждый человек в повседневной жизни решает большое количество разных задач: математических, хозяйственных, творческих, техничных.</p>
+					<p>"Перед тем, как что-нибудь сделать, нужно составить план", - говорила Алиса из сказки Льюиса Керлла. И в жизни мы всё время составляем план наших действий, например, утром большинство из нас действует по такому плану: встать, одеться, умыться, позавтракать, выйти из дома в школу. В информатике план действий называют алгоритмом. Многие считают, что алгоритмы и программирование появились с изобретением компъютера. Веб-квест "Путишествие в страну алгоритмов" поможет Вам разобраться так ли это.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<h4>Разработано <a target="blank" href="https://v-zhuravsky.github.io/">Вячеславом Журавским</a> для веб-квеста в рамках конкурса KROK IT Week. 2017</h4>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/handlebars.js"></script>
+
+	<script id="ul" type="text/x-handlebars-template">
+		<ul>
+			<h3>Навигация</h3>
+			{{#each links}}
+				<li><a href="{{link}}">{{name}}</a></li>
+			{{/each}}
+		</ul>
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var sidebar = $(".sidebar");
+			$.ajax({
+				url: "js/sidebar/uls.json"
+			}).done(function(data) {
+				var source = $("#ul").html();
+				var template = Handlebars.compile(source);
+				var html = template(data);
+				sidebar.append(html);
+			})
+		});
+	</script>
+</body>
+</html>

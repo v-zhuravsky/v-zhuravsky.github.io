@@ -1,0 +1,28 @@
+{
+	"articles": [
+		{
+	    	"title": "Creating simple http server using NodeJS.",
+	    	"text": "Hi, today I want to talk about NodeJS and it's built-in module http. For showing how it works I will write simple http server. So let's get started! Firstly we need to declare two variables: http (in which we will require http module) and server (here we will describe how server should work). <br> <code>var http = require('http'), server;</code> Now I'm going to describe server variable. <br> <code>server = http.createServer(function(request, response){<br><span class=\"left-10\">res.writeHead(200, {<br></span><span class=\"left-20\">'Content-Type': 'text/plain'</span><br><span class=\"left-10\">})</span><br><span class=\"left-10\">res.end('Text that will be in browser window.');</span><br>});</code>Here we called createServer method of http module with callback that requires two arguments: request and response. We used writeHead method of response argument to write headers and end method to make simple output.<br>Now we should write the last line of code: <code>server.listen(8000);</code> This line will launch our http server on port 8000. <br> Now we just need to start our script from NodeJS console: <br> <code>node script.js</code>Now we can open the browser, go to localhost:8000 and see output that we've written in res.end.", 
+	    	"date": "19.11.2016",
+	    	"id": 4
+	    },
+		{
+	    	"title": "Blog redesign.",
+	    	"text": "I've just updated design of my blog. What's been changed: header and footer styles, about page info and style.", 
+	    	"date": "15.08.2016",
+	    	"id": 3
+	    },
+		{
+	    	"title": "Django 1.10. First impressions.",
+	    	"text": "A few days ago I started to learn Django framework. This framework helps to create web sites with hyper speed using python programming language (one of my favorite programming languages). I've already created a few web sites using django and I really like it. For example, to create a good blog using django you need to spend only 20-30 minutes and it's awesome. As for me django is better variant for backend development than php. It's fast and secure and I think that I'll use that framework as main as for backend development.", 
+	    	"date": "15.08.2016",
+	    	"id": 2
+	    },
+	    {
+	    	"title": "My achievements in speedcubing [2016]",
+	    	"text": "I do speedcubing from 2013 with big break from 2014 to 2016. Now my average time from one hundred solves of Rubic’s cube is 16.05 seconds. Somebody can say that it is bad time for 3 years, but considering my break it’s normal time. My best time is 9.8 seconds. I did it 2 months ago. Except Rubic’s cube I train other puzzles. My average time on 2×2 cube is 6.78, on 4×4 cube – 1:54.21 and my megaminx average time is 3:45.98. Today I’m organizer of speedcubing meetings in Kyiv. Every Sunday we go to the public places, solving puzzles and compete against each other. You can get more detail information about speedcubing meetings in Kyiv from my VK page.",
+	    	"date": "12.08.2016",
+	    	"id": 1
+	    }
+	]
+}

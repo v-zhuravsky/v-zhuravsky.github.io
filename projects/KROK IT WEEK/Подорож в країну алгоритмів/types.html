@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Путишествие в страну алгоритмов</title>
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="css/bs-grid.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header class="header shadow">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="algorithms.html">Алгоритмы</a></li>
+		</ul>
+	</header>
+
+	<div class="container main">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="sidebar block shadow">
+					
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="block shadow content">
+					<h1>Виды алгоритмов</h1>
+					<p>Особую роль выполняют прикладные алгоритмы, предназначенные для решения определенных прикладных задач. Алгоритм считается правильным, если он отвечает требованиям задачи (например, даёт физически правдоподобный результат). Алгоритм (программа) содержит ошибки, если для некоторых исходных данных он дает неправильные результаты, сбои, отказы или не дает никаких результатов вообще. Последний тезис используется в олимпиадах по алгоритмическому программированию, чтобы оценить составленные участниками программы.</p>
+					<p>Важную роль играют рекурсивные алгоритмы (алгоритмы, вызывающие сами себя до тех пор, пока не будет достигнуто некоторое условие возвращения). Начиная с конца XX — начала XXI века активно разрабатываются параллельные алгоритмы, предназначенные для вычислительных машин, способных выполнять несколько операций одновременно.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<h4>Разработано <a target="blank" href="https://v-zhuravsky.github.io/">Вячеславом Журавским</a> для веб-квеста в рамках конкурса KROK IT Week. 2017</h4>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/handlebars.js"></script>
+
+	<script id="ul" type="text/x-handlebars-template">
+		<ul>
+			<h3>Навигация</h3>
+			{{#each links}}
+				<li><a href="{{link}}">{{name}}</a></li>
+			{{/each}}
+		</ul>
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var sidebar = $(".sidebar");
+			$.ajax({
+				url: "js/sidebar/uls.json"
+			}).done(function(data) {
+				var source = $("#ul").html();
+				var template = Handlebars.compile(source);
+				var html = template(data);
+				sidebar.append(html);
+			})
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+	padding-bottom: 100px;
+}
+.results {
+	background: #df691a;
+	margin-top: 15px;
+	padding-bottom: 15px;
+}
+.results h2 {
+	margin: 15px 0 0;
+}
+.results img {
+	height: 248px;
+	width: 248px;
+	margin-top: 15px;
+}
+.results ul {
+	display: block;
+	list-style: none;
+	margin: 15px 0;
+	padding: 0;
+}
+.results ul li {
+	float: left;
+	margin-right: 10px;
+	padding: 5px;
+	background: #2b3e50;
+}
+.footer {
+	background: #df691a;
+	padding: 5px 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.footer h4 {
+	text-align: center;
+}
+.footer h4 a {
+	color: #2b3e50;
+}
