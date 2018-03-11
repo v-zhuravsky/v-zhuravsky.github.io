@@ -1,6 +1,12 @@
 {
 	"articles": [
 		{
+	    	"title": "JavaScript...",
+	    	"text": "И воцарилось просветление в миру убогих программистов, пришёл на помощь JavaScript им и воцарилось там единство <br>И начали писать фреймворки в пылу азарта и любви <br>И наплодилось их там куча, мол не хватает им профита <br>И появились паттерны, редаксы и молва... <br>Что пишут на JS лишь школьники, играющие в города... <br><br><br>Автор стиха Вячеслав Журавский <br>С любовью ко всем тварям, которые утверждают, что JS - херня <br>", 
+	    	"date": "11.03.2018",
+	    	"id": 5
+	    },
+		{
 	    	"title": "Creating simple http server using NodeJS.",
 	    	"text": "Hi, today I want to talk about NodeJS and it's built-in module http. For showing how it works I will write simple http server. So let's get started! Firstly we need to declare two variables: http (in which we will require http module) and server (here we will describe how server should work). <br> <code>var http = require('http'), server;</code> Now I'm going to describe server variable. <br> <code>server = http.createServer(function(req, res){<br><span class=\"left-10\">res.writeHead(200, {<br></span><span class=\"left-20\">'Content-Type': 'text/plain'</span><br><span class=\"left-10\">})</span><br><span class=\"left-10\">res.end('Text that will be in browser window.');</span><br>});</code>Here we called createServer method of http module with callback that requires two arguments: request and response. We used writeHead method of response argument to write headers and end method to make simple output.<br>Now we should write the last line of code: <code>server.listen(8000);</code> This line will launch our http server on port 8000. <br> Now we just need to start our script from NodeJS console: <br> <code>node script.js</code>Now we can open the browser, go to localhost:8000 and see output that we've written in res.end.", 
 	    	"date": "19.11.2016",
