@@ -6,10 +6,6 @@
 	],
 	"projects": [
 	    {
-	    	"name" : "Web Wolf",
-	    	"link" : "http://web-wolf.org"
-	    },
-	    {
 	    	"name" : "Speedcubing timer \"Be fast\"",
 	    	"link" : "https://be-fast.github.io"
 	    },
