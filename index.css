@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #2e3131;
+}
+
+body {
+    background: #fff;
+}
+
+.container {
+    max-width: 960px;
+    margin: 50px auto;
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        margin: 0;
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+header {
+    margin-bottom: 15px;
+    border-bottom: 3px solid #22a7f0;
+}
+
+.name, .title {
+    font-size: 26px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.contacts {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 540px) {
+    .contacts {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .contact {
+        margin-bottom: 10px;
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact:not(:last-child) {
+    margin-right: 10px;
+}
+
+.contact, .contact a {
+    font-size: 14px;
+
+}
+
+.contact svg {
+    margin-right: 5px;
+}
+
+.email svg {
+    width: 24px;
+    height: 20px;
+}
+
+.github svg {
+    height: 20px;
+    width: 20px;
+}
+
+.contact a {
+    text-decoration: none;
+}
+
+.content-block {
+    margin-bottom: 15px;
+}
+
+.content-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.line {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.company {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.content-block .line:last-child {
+    margin-bottom: 0;
+}
